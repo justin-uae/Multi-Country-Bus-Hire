@@ -1,23 +1,28 @@
-"use client";
-
+import { useState } from "react";
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "../common/dialog";
 import { Button } from "../common/button";
 import ContactForm from "./Quote";
 
 export default function ContactModal() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button aria-controls="">Request a Quote</Button>
+        <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
+          Request a Quote
+        </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-lg sm:w-full" id="contact-dialog-content">
+      <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle>Contact Us</DialogTitle>
+          <DialogTitle>Get Your Custom Quote</DialogTitle>
           <DialogDescription>
-            Fill out the form below to get a custom quote for your event.
+            We'll get back to you within 24 hours
           </DialogDescription>
         </DialogHeader>
-        <ContactForm />
+        <div className="p-6 bg-white max-h-[60vh] overflow-y-auto">
+          <ContactForm onSuccess={() => setIsOpen(false)} />
+        </div>
       </DialogContent>
     </Dialog>
   );
