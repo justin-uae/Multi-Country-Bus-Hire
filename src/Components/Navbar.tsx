@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCountryData } from '../data/data';
-import ContactModal from './QuoteModal'; // Assuming you have this component
+import ContactModal from './QuoteModal';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

@@ -15,7 +15,7 @@ const OurPartners = () => {
                 </div>
 
                 {/* Partner Logos Grid */}
-                {/* <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
                     {data.partners.logos.map((partner, index) => (
                         <div
                             key={index}
@@ -36,10 +36,10 @@ const OurPartners = () => {
                             />
                         </div>
                     ))}
-                </div> */}
+                </div>
 
                 {/* Animated Scrolling Version (Alternative) */}
-                <div className="mt-16 overflow-hidden">
+                {/* <div className="mt-16 overflow-hidden">
                     <div className="flex animate-scroll whitespace-nowrap">
                         {[...data.partners.logos, ...data.partners.logos].map((partner, index) => (
                             <div
@@ -61,7 +61,7 @@ const OurPartners = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <style>{`
