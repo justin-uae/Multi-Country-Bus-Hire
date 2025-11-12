@@ -34,10 +34,11 @@ export const countryData = {
 
         // Hero section
         hero: {
-            title: "The home of coach and minibus hire in France",
+            title: "The home of coach and minibus hire in",
             description: "Discover reliable and affordable coach and minibus hire in France with France Buses — ideal for corporate events, school trips, airport transfers, private tours, and group travel across the country.",
             image: "/images/bus-hire-transparent.png",
             frameImage: "/images/Frame.png",
+            countryName: "France",
             cities: ["Paris", "Lyon", "Marseille", "Bordeaux"]
         },
 
@@ -283,7 +284,8 @@ export const countryData = {
         finalCta: {
             title: "Let's get your journey started",
             description: "Get a quick quote from France Buses and travel with comfort, style, and confidence.",
-            image: "/images/contact_support_transparent.png"
+            image: "/images/contact_support_transparent.png",
+            buttonText: "Request a Quote"
         },
 
         // Service page details
@@ -423,42 +425,43 @@ export const countryData = {
 
         // Hero section
         hero: {
-            title: "Professional coach and minibus hire services across Poland",
+            title: "Professional coach and minibus hire services across",
             description: "Reliable and affordable coach and minibus hire in Poland with Poland Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Poland.",
             image: "/images/bus-hire-transparent.png",
             frameImage: "/images/Frame.png",
+            countryName: "Poland",
             cities: ["Warsaw", "Krakow", "Wroclaw", "Gdansk"]
         },
 
         // Services section
         services: [
             {
-                key: "corporate",
-                title: "Corporate Events Poland",
+                key: "corporate-events",
+                title: "Corporate Events",
                 description: "Streamline your corporate travel with our premium coach hire services across Poland. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
                 image: "/images/corporate21.png"
             },
             {
-                key: "school",
-                title: "School Trips Poland",
+                key: "school-trips",
+                title: "School Trips",
                 description: "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Poland. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
                 image: "/images/school21.png"
             },
             {
                 key: "shuttles",
-                title: "Shuttle Services Poland",
+                title: "Shuttle Services",
                 description: "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Poland. Designed for maximum convenience and comfort.",
                 image: "/images/shuttle21.png"
             },
             {
                 key: "transfers",
-                title: "Transport Transfers Poland",
+                title: "Transfers",
                 description: "Experience seamless door-to-door transport with our professional transfer service anywhere in Poland. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
                 image: "/images/transfer21.png"
             },
             {
                 key: "home",
-                title: "Home to School Transport Poland",
+                title: "Home to School",
                 description: "Simplify your family's daily routine with our safe and reliable home to school transport service in Poland. Our professional drivers ensure punctuality and give parents complete peace of mind.",
                 image: "/images/home21.png"
             }
@@ -601,7 +604,7 @@ export const countryData = {
         whyChooseUs: {
             badge: "Why Choose Us",
             title: "Why Poland Buses",
-            description: "Choose Poland Buses for reliable, comfortable, and affordable group transport throughout Poland. We make every journey across the country effortless with professional drivers and modern vehicles.",
+            description: "Choose Poland Buses for reliable, comfortable, and affordable group transport throughout Poland.",
             image: "/images/bus2.png",
             vectorImage: "/images/Vector.png",
             features: [
@@ -656,8 +659,6 @@ export const countryData = {
             badge: "We've partnered with",
             items: [
                 { name: "Warsaw University", logo: "/images/partner/psg.png" },
-                { name: "Apple Poland", logo: "/images/partner/apple-logo-banner.avif" },
-                { name: "CD Projekt RED", logo: "/images/partner/nintendo-logo-banner.avif" },
                 { name: "Polish Olympic Committee", logo: "/images/partner/ttl.png" },
                 { name: "Empik", logo: "/images/partner/if.png" },
                 { name: "Jagiellonian University", logo: "/images/partner/su.png" },
@@ -672,7 +673,8 @@ export const countryData = {
         finalCta: {
             title: "Let's get your Polish journey started",
             description: "Get a quick quote from Poland Buses and travel across Poland with comfort, style, and confidence.",
-            image: "/images/contact_support_transparent.png"
+            image: "/images/contact_support_transparent.png",
+            buttonText: "Request a Quote"
         },
 
         // Service page details
@@ -812,10 +814,11 @@ export const countryData = {
 
         // Hero section
         hero: {
-            title: "Professional coach and minibus hire services across Romania",
+            title: "Professional coach and minibus hire services across",
             description: "Reliable and affordable coach and minibus hire in Romania with Romania Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Romania.",
             image: "/images/bus-hire-transparent.png",
             frameImage: "/images/Frame.png",
+            countryName: "Romania",
             cities: ["Bucharest", "Cluj-Napoca", "Timisoara", "Iasi"]
         },
 
@@ -1061,7 +1064,8 @@ export const countryData = {
         finalCta: {
             title: "Let's get your Romanian journey started",
             description: "Get a quick quote from Romania Buses and travel across Romania with comfort, style, and confidence.",
-            image: "/images/contact_support_transparent.png"
+            image: "/images/contact_support_transparent.png",
+            buttonText: "Request a Quote"
         },
 
         // Service page details

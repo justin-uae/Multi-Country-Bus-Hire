@@ -1,73 +1,97 @@
 import React, { useState } from 'react';
-import { getCountryData } from '../data/data';
-import { ArrowRight } from 'lucide-react';
+import { getCountryData } from '../data/basecode';
+import { Link } from 'react-router-dom';
 
-const OurServices = () => {
-    const data = getCountryData();
-    const [activeService, setActiveService] = useState(0);
+const ServicesSection = () => {
+
+    const countryCode = 'pl';
+    const countryData = getCountryData(countryCode);
+    const services = countryData.services;
+
+
+    const [activeTab, setActiveTab] = useState(services[0].key);
+
+    const activeService = services.find((service: any) => service.key === activeTab);
 
     return (
-        <section className="py-16 md:py-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-white py-16 md:py-24">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-12">
-                    <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                        {data.services.sectionTitle}
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                        {data.services.heading}
+                <div className="text-center mb-12 md:mb-16">
+                    <h3 className="inline-block bg-blue-100 text-blue-600 px-3 py-2 rounded-full text-sm font-semibold ">
+                        Our Services
+                    </h3>
+                    <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
+                        Comprehensive transport solutions tailored to meet all your travel needs across {countryData?.hero?.countryName}
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                        {data.services.description}
-                    </p>
                 </div>
 
-                {/* Service Tabs */}
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
-                    {data.services.categories.map((service, index) => (
-                        <button
-                            key={service.id}
-                            onClick={() => setActiveService(index)}
-                            className={`px-6 py-3 rounded-full font-medium transition-all ${activeService === index
-                                ? 'bg-blue-600 text-white shadow-lg'
-                                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                                }`}
-                        >
-                            {service.name}
-                        </button>
-                    ))}
-                </div>
-
-                {/* Active Service Display */}
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div className="grid md:grid-cols-2 gap-0">
-                        {/* Image */}
-                        <div className="relative h-64 md:h-auto">
-                            <img
-                                src={data.services.categories[activeService].image}
-                                alt={data.services.categories[activeService].name}
-                                className="w-full h-full object-cover"
-                                onError={(e: any) => {
-                                    e.target.src = 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&h=600&fit=crop';
-                                }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-8 md:p-12 flex flex-col justify-center">
-                            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                {data.services.categories[activeService].name}
-                            </h3>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                {data.services.categories[activeService].description}
-                            </p>
-                            <a
-                                href={data.services.categories[activeService].link}
-                                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
+                {/* Tabs Navigation */}
+                <div className="mb-12">
+                    {/* Desktop Tabs */}
+                    <div className="mb-12 flex justify-center gap-4 flex-wrap">
+                        {services.map((service: any) => (
+                            <button
+                                key={service.key}
+                                onClick={() => setActiveTab(service.key)}
+                                className={
+                                    `px-5 py-2 rounded-full transition-colors duration-200 focus:outline-none border 
+                ${activeTab === service.key
+                                        ? 'bg-blue-600 text-white border-blue-600'
+                                        : 'bg-white text-gray-600 border-gray-300 hover:bg-blue-50 hover:text-blue-600'}`
+                                }
                             >
-                                Learn more <ArrowRight size={20} />
-                            </a>
+                                {service.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Mobile Dropdown */}
+                    <div className="md:hidden">
+                        <select
+                            value={activeTab}
+                            onChange={(e) => setActiveTab(e.target.value)}
+                            className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-gray-700 font-semibold focus:border-blue-500 focus:outline-none"
+                        >
+                            {services.map((service: any) => (
+                                <option key={service.key} value={service.key}>
+                                    {service.title}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
+
+                {/* Active Service Content */}
+                <div className="max-w-5xl mx-auto">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                        <div className="grid md:grid-cols-2 gap-0">
+                            {/* Image Section */}
+                            <div className="relative h-64 md:h-auto overflow-hidden">
+                                <img
+                                    src={activeService.image}
+                                    alt={activeService.title}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+                            </div>
+
+                            {/* Content Section */}
+                            <div className="p-8 md:p-10 flex flex-col justify-center">
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                    {activeService.title}
+                                </h3>
+                                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
+                                    {activeService.description}
+                                </p>
+
+                                {/* Action Buttons */}
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Link to={activeService?.key} className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+                                        Learn More
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,4 +100,4 @@ const OurServices = () => {
     );
 };
 
-export default OurServices;
+export default ServicesSection;

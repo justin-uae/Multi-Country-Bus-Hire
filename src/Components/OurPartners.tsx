@@ -1,89 +1,89 @@
 import React from 'react';
-import { getCountryData } from '../data/data';
+// import { getCountryData } from '../data/data';
+import { getCountryData } from '../data/basecode';
 
 const OurPartners = () => {
-    const data = getCountryData();
+  const countryCode = 'pl';
+  const countryData = getCountryData(countryCode);
 
-    return (
-        <section className="py-16 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Title */}
-                <div className="text-center mb-12">
-                    <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                        {data.partners.sectionTitle}
-                    </div>
+  // Duplicate partners array for seamless infinite scroll
+  const duplicatedPartners = [...countryData.partners.items, ...countryData.partners.items];
+
+  return (
+    <section className=" bg-gradient-to-b from-white to-gray-50 overflow-hidden relative">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Title */}
+        <div className="text-center">
+          <div className="inline-block bg-blue-100 text-blue-600 px-3 py-2 rounded-full text-sm font-semibold">
+            <span className="text-blue-600">{countryData.partners.badge}</span>
+          </div>
+        </div>
+
+        {/* Animated Partner Logos - Infinite Scroll */}
+        <div className="relative">
+          {/* Gradient Overlays for fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+          {/* Scrolling Container */}
+          <div className="overflow-hidden py-8">
+            <div className="flex animate-scroll hover:pause-animation">
+              {duplicatedPartners.map((partner: any, index: any) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 mx-8 group"
+                  style={{ width: '150px' }}
+                >
+                  <div className="relative bg-white rounded-2xl p-6 shadow-md transition-all duration-500 transform">
+                    {/* Gradient Border Effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 transition-opacity duration-500 -z-10 blur"></div>
+
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="w-full h-20 object-contain transition-all duration-500"
+                    />
+                  </div>
                 </div>
-
-                {/* Partner Logos Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-                    {data.partners.logos.map((partner, index) => (
-                        <div
-                            key={index}
-                            className="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                        >
-                            <img
-                                src={partner.image}
-                                alt={partner.name}
-                                className="w-full h-auto max-h-12 object-contain"
-                                onError={(e: any) => {
-                                    // Fallback to a simple text representation if image fails
-                                    e.target.style.display = 'none';
-                                    const textDiv = document.createElement('div');
-                                    textDiv.className = 'text-gray-800 font-bold text-sm text-center';
-                                    textDiv.textContent = partner.name;
-                                    e.target.parentNode.appendChild(textDiv);
-                                }}
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {/* Animated Scrolling Version (Alternative) */}
-                {/* <div className="mt-16 overflow-hidden">
-                    <div className="flex animate-scroll whitespace-nowrap">
-                        {[...data.partners.logos, ...data.partners.logos].map((partner, index) => (
-                            <div
-                                key={index}
-                                className="inline-flex items-center justify-center mx-8 grayscale opacity-60"
-                            >
-                                <img
-                                    src={partner.image}
-                                    alt={partner.name}
-                                    className="h-10 w-auto object-contain"
-                                    onError={(e: any) => {
-                                        e.target.style.display = 'none';
-                                        const textDiv = document.createElement('div');
-                                        textDiv.className = 'text-gray-800 font-semibold text-sm';
-                                        textDiv.textContent = partner.name;
-                                        e.target.parentNode.appendChild(textDiv);
-                                    }}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
+              ))}
             </div>
+          </div>
+        </div>
+      </div>
+      <style>{`
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
 
-            <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
+                .animate-scroll {
+                    animation: scroll 40s linear infinite;
+                    display: flex;
+                    width: fit-content;
+                }
 
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
+                .pause-animation:hover {
+                    animation-play-state: paused;
+                }
 
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
-        </section>
-    );
+                @media (max-width: 768px) {
+                    .animate-scroll {
+                        animation: scroll 30s linear infinite;
+                    }
+                }
+            `}</style>
+    </section>
+  );
 };
 
 export default OurPartners;
