@@ -43,6 +43,7 @@ const OurPartners = () => {
 
                     <img
                       src={partner.logo}
+                      loading="lazy"
                       alt={partner.name}
                       className="w-full h-20 object-contain transition-all duration-500"
                     />

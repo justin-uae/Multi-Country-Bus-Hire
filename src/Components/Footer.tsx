@@ -10,19 +10,19 @@ const PhoneIcon = ({ className }: { className?: string }) => <Phone className={c
 const MailIcon = ({ className }: { className?: string }) => <Mail className={className} />;
 
 interface Service {
-  name: string;
-  href: string;
+    name: string;
+    href: string;
 }
 
 interface SocialIcon {
-  Icon: React.ComponentType<{ className?: string }>;
-  href: string;
-  id: string;
+    Icon: React.ComponentType<{ className?: string }>;
+    href: string;
+    id: string;
 }
 
 export default function Footer() {
     const data = getCountryData();
-    
+
     const icons: SocialIcon[] = [
         { Icon: FaWhatsapp, href: data.company.whatsapp, id: "1" },
     ];
@@ -35,10 +35,11 @@ export default function Footer() {
                     <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
                         <div className="space-y-4">
                             <a href="/" className="flex justify-center sm:justify-start items-center">
-                                <img 
-                                    src={data.company.logo} 
-                                    width={150} 
-                                    height={49} 
+                                <img
+                                    src={data.company.logo}
+                                    width={150}
+                                    height={49}
+                                    loading="lazy"
                                     alt={`${data.company.name} Logo`}
                                     className="h-auto"
                                 />

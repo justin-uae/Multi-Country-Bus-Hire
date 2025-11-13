@@ -34,6 +34,7 @@ const WhyChooseUs = ({ title, description, image, features }: WhyChooseUsProps) 
                         <img
                             src={image}
                             alt="Bus"
+                            loading="lazy"
                             className="relative z-10 w-full max-w-lg object-contain"
                         />
                     </div>

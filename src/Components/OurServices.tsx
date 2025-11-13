@@ -77,6 +77,7 @@ const ServicesSection = ({ badge, heading, services }: ServicesSectionProps) => 
                                     <img
                                         src={activeService.image}
                                         alt={activeService.title}
+                                        loading="lazy"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
