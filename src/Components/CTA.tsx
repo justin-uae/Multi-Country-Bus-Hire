@@ -16,6 +16,7 @@ const CTA = () => {
                                 src={countryData.finalCta.image}
                                 alt="Customer Support"
                                 className="w-full max-w-xs h-auto object-contain"
+                                loading="lazy"
                                 onError={(e: any) => {
                                     e.target.src = 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop';
                                 }}
