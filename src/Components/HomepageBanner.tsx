@@ -2,7 +2,8 @@ import { getCountryData } from '../data/basecode';
 import ContactModal from './QuoteModal';
 
 const HomepageBanner = () => {
-    const data = getCountryData();
+    const countryCode = 'pl';
+    const data = getCountryData(countryCode);
     return (
         <section className="relative bg-white overflow-hidden">
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-5">
@@ -39,6 +40,7 @@ const HomepageBanner = () => {
                         src={data.hero.image}
                         width={600}
                         height={400}
+                        loading='lazy'
                         alt="France Buses coach and minibus hire services in France"
                         className="object-contain z-10 relative h-auto"
                     />
@@ -46,6 +48,7 @@ const HomepageBanner = () => {
                         src={data.hero.frameImage}
                         width={600}
                         height={400}
+                        loading='lazy'
                         alt="France Buses decorative frame design"
                         className="object-contain absolute right-[-20px] w-[30vw] max-w-[350px] lg:max-w-[600px] h-auto lg:h-[520px] hidden lg:block"
                     />

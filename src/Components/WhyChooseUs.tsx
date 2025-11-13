@@ -1,13 +1,20 @@
-import React from "react";
-// import { getCountryData } from "../data/data";
 import { ShieldCheck, User, Clock, Headset } from "lucide-react";
-import { getCountryData } from '../data/basecode';
 
-const WhyChooseUs = () => {
-    const data = getCountryData();
-    const countryCode = 'pl';
-    const countryData = getCountryData(countryCode);
+interface Feature {
+    id: number;
+    icon: string;
+    title: string;
+    description: string;
+}
 
+interface WhyChooseUsProps {
+    title: string;
+    description: string;
+    image: string;
+    features: Feature[];
+}
+
+const WhyChooseUs = ({ title, description, image, features }: WhyChooseUsProps) => {
     const iconMap: Record<string, any> = {
         ShieldCheck: ShieldCheck,
         User: User,
@@ -25,7 +32,7 @@ const WhyChooseUs = () => {
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-blue-100 clip-path-polygon z-0" />
                         {/* Bus image */}
                         <img
-                            src={countryData.whyChooseUs.image}
+                            src={image}
                             alt="Bus"
                             className="relative z-10 w-full max-w-lg object-contain"
                         />
@@ -35,17 +42,17 @@ const WhyChooseUs = () => {
                     <div className="space-y-8">
                         {/* Section title */}
                         <div className="inline-block bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold">
-                            {countryData.whyChooseUs.title}
+                            {title}
                         </div>
 
                         {/* Heading */}
                         <h2 className="text-2xl font-extrabold text-gray-900 leading-snug">
-                            {countryData.whyChooseUs.description}
+                            {description}
                         </h2>
 
                         {/* Feature list */}
                         <div className="space-y-6">
-                            {countryData.whyChooseUs.features.map((feature: any) => {
+                            {features.map((feature) => {
                                 const IconComponent = iconMap[feature.icon] || ShieldCheck;
                                 return (
                                     <div key={feature.id} className="flex gap-4">

@@ -1,12 +1,12 @@
-import React from 'react';
 import { getCountryData } from '../data/basecode';
+import ContactModal from './QuoteModal';
 
 const CTA = () => {
     const countryCode = 'pl';
     const countryData = getCountryData(countryCode);
 
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-16 md:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0 items-center">
@@ -30,9 +30,9 @@ const CTA = () => {
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                 {countryData.finalCta.description}
                             </p>
-                            <button className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                                {countryData.finalCta.buttonText}
-                            </button>
+                            <div className="hidden md:flex items-center space-x-4 mt-5 mb-10">
+                                <ContactModal />
+                            </div>
                         </div>
                     </div>
                 </div>

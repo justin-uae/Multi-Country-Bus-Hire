@@ -471,7 +471,7 @@ export const countryData = {
         aboutUs: {
             badge: "About Us",
             description: "At Poland Buses, we are proud to be one of Poland's leading providers of reliable, comfortable, and affordable group transportation. From Warsaw to Krakow, Wroclaw to Gdansk, we make travel simple with our modern fleet, professional drivers, and commitment to exceptional service throughout Poland.",
-            image: "/images/abtus.png",
+            image: "/images/hero-about.png",
             features: [
                 {
                     title: "Modern Polish Fleet",
