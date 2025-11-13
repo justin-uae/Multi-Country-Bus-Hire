@@ -1,5 +1,5 @@
 import React from 'react'
-import HomepageBanner from '../Components/HomePageBanner'
+import HomepageBanner from '../Components/HomepageBanner'
 import OurServices from '../Components/OurServices'
 import OurPartners from '../Components/OurPartners'
 import WhyChooseUs from '../Components/WhyChooseUs'

@@ -1,75 +1,55 @@
-import React from 'react';
-import { getCountryData } from '../data/data';
+import { getCountryData } from '../data/basecode';
+import ContactModal from './QuoteModal';
 
 const HomepageBanner = () => {
     const data = getCountryData();
-
     return (
-        <section className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                    {/* Left Content */}
-                    <div className="space-y-6">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                            {data.hero.title.split(data.hero.highlight)[0]}
-                            <span className="text-blue-600">{data.hero.highlight}</span>
-                            {data.hero.title.split(data.hero.highlight)[1]}
-                        </h1>
+        <section className="relative bg-white overflow-hidden">
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-5">
 
-                        <p className="text-lg md:text-xl text-gray-600">
-                            {data.hero.subtitle}
-                        </p>
+                {/* Left side: text + badges */}
+                <div className="space-y-6">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
+                        {data?.hero?.title} {""}
+                        <span className="text-blue-600 underline"> {data?.hero?.countryName}</span>
 
-                        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg">
-                                {data.hero.ctaText}
-                            </button>
+                    </h1>
 
-                            <div className="flex items-center gap-2 text-gray-600">
-                                <span>Or speak to one of our team on</span>
-                                <a
-                                    href={`tel:${data.contact.phone}`}
-                                    className="text-blue-600 font-semibold hover:text-blue-700"
-                                >
-                                    {data.contact.phone}
-                                </a>
-                            </div>
-                        </div>
+                    <p className="text-gray-700 max-w-md">
+                        {data?.hero?.description}
+                        {/* Discover reliable and affordable <strong>coach and minibus hire in France</strong> with <strong>France Buses</strong> — ideal for corporate events, school trips, airport transfers, private tours, and group travel across the country. */}
+                    </p>
+                    <div className="hidden md:flex items-center space-x-4 mt-5 mb-10">
+                        <ContactModal />
                     </div>
+                    {/* Request a Quote button - now left-aligned and below description */}
 
-                    {/* Right Image */}
-                    <div className="relative">
-                        <div className="relative z-10">
-                            <img
-                                src={data.hero.image}
-                                alt="Luxury Bus"
-                                className="w-full h-auto object-contain drop-shadow-2xl"
-                                onError={(e: any) => {
-                                    e.target.src = 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop';
-                                }}
-                            />
-                        </div>
 
-                        {/* Decorative background shapes */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-50 -z-10"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-100 rounded-full filter blur-3xl opacity-50 -z-10"></div>
-                    </div>
+                    <p className="text-gray-700 max-w-md">
+                        Speak directly with our transport team at{" "}
+                        <a href="tel:+442038343226">
+                            <span className="text-primary">{data?.company?.phone}</span>
+                        </a>
+                    </p>
                 </div>
-            </div>
 
-            {/* Wave decoration at bottom */}
-            <div className="absolute bottom-0 left-0 right-0">
-                <svg
-                    viewBox="0 0 1440 120"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-auto"
-                >
-                    <path
-                        d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z"
-                        fill="white"
+                {/* Right side: hero image */}
+                <div className="flex justify-center lg:justify-end relative">
+                    <img
+                        src={data.hero.image}
+                        width={600}
+                        height={400}
+                        alt="France Buses coach and minibus hire services in France"
+                        className="object-contain z-10 relative h-auto"
                     />
-                </svg>
+                    <img
+                        src={data.hero.frameImage}
+                        width={600}
+                        height={400}
+                        alt="France Buses decorative frame design"
+                        className="object-contain absolute right-[-20px] w-[30vw] max-w-[350px] lg:max-w-[600px] h-auto lg:h-[520px] hidden lg:block"
+                    />
+                </div>
             </div>
         </section>
     );

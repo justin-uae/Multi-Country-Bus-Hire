@@ -16,7 +16,7 @@ export const countryData = {
             highlight: "hire",
             subtitle: "UK-wide corporate events, transfers & school trips",
             ctaText: "Request a Quote",
-            image: "/images/bus-uk.png"
+            image: "/images/bus-hire-transparent.png"
         },
         services: {
             sectionTitle: "Our Services",
@@ -27,35 +27,35 @@ export const countryData = {
                     id: 1,
                     name: "Corporate events",
                     description: "From intimate gatherings to corporate events, our specialized team delivers exceptional, tailor-made transport solutions with a fleet ranging from minibuses to double deckers, ensuring every event is a glowing success.",
-                    image: "/images/corporate.jpg",
+                    image: "/images/corporate1.png",
                     link: "/corporate-events"
                 },
                 {
                     id: 2,
                     name: "School trips",
                     description: "Safe, reliable transportation for educational trips and school events with experienced drivers and modern, comfortable coaches.",
-                    image: "/images/school.jpg",
+                    image: "/images/school.png",
                     link: "/school-trips"
                 },
                 {
                     id: 3,
                     name: "Shuttles",
                     description: "Regular shuttle services for airports, hotels, and corporate campuses with flexible scheduling and professional service.",
-                    image: "/images/shuttle.jpg",
+                    image: "/images/shuttles.png",
                     link: "/shuttles"
                 },
                 {
                     id: 4,
                     name: "Transfers",
                     description: "Point-to-point transfer services for any occasion, from airport pickups to special events with door-to-door convenience.",
-                    image: "/images/transfer.jpg",
+                    image: "/images/transfer.png",
                     link: "/transfers"
                 },
                 {
                     id: 5,
                     name: "Home to school",
                     description: "Dedicated home-to-school transport services ensuring safe, punctual journeys for students every day.",
-                    image: "/images/home-school.jpg",
+                    image: "/images/home.png",
                     link: "/home-to-school"
                 }
             ]
@@ -63,14 +63,14 @@ export const countryData = {
         partners: {
             sectionTitle: "We've partnered with",
             logos: [
-                { name: "Gala Bingo", image: "/images/partners/gala.png" },
-                { name: "ITV", image: "/images/partners/itv.png" },
-                { name: "Nintendo", image: "/images/partners/nintendo.png" },
-                { name: "North London Collegiate School", image: "/images/partners/nlcs.png" },
-                { name: "Sky", image: "/images/partners/sky.png" },
-                { name: "Wembley", image: "/images/partners/wembley.png" },
-                { name: "Alpadia Language Schools", image: "/images/partners/alpadia.png" },
-                { name: "Apple", image: "/images/partners/apple.png" }
+                { name: "Gala Bingo", image: "/images/partner/ac.png" },
+                { name: "ITV", image: "/images/partner/af.png" },
+                { name: "Nintendo", image: "/images/partner/dlp.png" },
+                { name: "North London Collegiate School", image: "/images/partner/if.png" },
+                { name: "Sky", image: "/images/partner/ip.png" },
+                { name: "Wembley", image: "/images/partner/psg.png" },
+                { name: "Alpadia Language Schools", image: "/images/partner/su.png" },
+                { name: "Apple", image: "/images/partner/ul.png" }
             ]
         },
         whyChooseUs: {
@@ -372,7 +372,7 @@ export const countryData = {
             highlight: "premium",
             subtitle: "Événements d'entreprise, transferts et voyages scolaires partout en France",
             ctaText: "Demander un Devis",
-            image: "/images/bus-france.png"
+            image: "/images/France.png"
         },
         services: {
             sectionTitle: "Nos Services",
@@ -383,14 +383,14 @@ export const countryData = {
                     id: 1,
                     name: "Événements d'entreprise",
                     description: "Des rassemblements intimes aux événements d'entreprise, notre équipe spécialisée offre des solutions de transport exceptionnelles et sur mesure.",
-                    image: "/images/corporate.jpg",
+                    image: "/images/corporate.png",
                     link: "/evenements-entreprise"
                 },
                 {
                     id: 2,
                     name: "Voyages scolaires",
                     description: "Transport sûr et fiable pour les voyages éducatifs et événements scolaires avec des chauffeurs expérimentés.",
-                    image: "/images/school.jpg",
+                    image: "/images/school.png",
                     link: "/voyages-scolaires"
                 },
                 {
