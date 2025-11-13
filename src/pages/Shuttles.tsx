@@ -6,8 +6,7 @@ import TestimonialSection from "../Components/TestimonialSection";
 import FinalCta from "../Components/CTA";
 
 const Shuttles = () => {
-    const countryCode = "pl";
-    const countryData = getCountryData(countryCode);
+    const countryData = getCountryData();
     const shuttlesData = countryData.servicePages.shuttles;
 
     return (

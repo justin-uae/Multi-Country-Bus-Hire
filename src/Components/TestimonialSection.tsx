@@ -25,10 +25,10 @@ interface TestimonialsData {
 }
 
 // You can get the country code from context, URL params, or user selection
-const countryCode = 'fr';
+
 
 export default function TestimonialSection() {
-  const countryData = getCountryData(countryCode);
+  const countryData = getCountryData();
   const testimonialsData: TestimonialsData = countryData.testimonials;
 
   const categories: string[] = testimonialsData.categories.map((cat: TestimonialCategory) => cat.key);

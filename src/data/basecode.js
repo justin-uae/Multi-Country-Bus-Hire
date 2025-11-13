@@ -440,7 +440,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@polandbuses.com",
       address: "Jarosława Dąbrowskiego 71/71, 02-586 Warszawa, Poland",
-      logo: "../public/images/logo2.png",
+      logo: "../public/images/poland.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -864,7 +864,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@romaniabuses.com",
       address: "Str. Dr. Nicolae D. Staicovici 75, București 050557, Romania",
-      logo: "/images/logo2.png",
+      logo: "../public/images/romania.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -1301,7 +1301,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@hungarybuses.com",
       address: "Budapest, József Attila u. 20, 1051 Hungary",
-      logo: "/images/logo2.png",
+      logo: "../public/images/hungary.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -1739,7 +1739,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@portugalbuses.com",
       address: "R. Lucinda Simões 10A, 1900-034 Lisboa, Portugal",
-      logo: "/images/logo2.png",
+      logo: "/images/portugal.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -2178,7 +2178,7 @@ export const countryData = {
       email: "info@brazilbuses.com",
       address:
         "St. de Habitações Individuais Sul EQI 9/11 - Lago Sul, Brasília - DF, 71625-090, Brazil",
-      logo: "/images/logo2.png",
+      logo: "/images/brazil.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -2616,7 +2616,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@moroccobuses.com",
       address: "X4F2+QJW, Avenue Al Mohit Al Hadi, Rabat, Morocco",
-      logo: "/images/logo2.png",
+      logo: "/images/morocco.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -3055,7 +3055,7 @@ export const countryData = {
       email: "info@saudibuses.com",
       address:
         "8194 Al Mujashiah, 5171, As Suwaidi, Riyadh 12797, Saudi Arabia",
-      logo: "/images/logo2.png",
+      logo: "/images/saudi.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -3487,7 +3487,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@maltabuses.com",
       address: "134 St. Christopher's Street, Il-Belt Valletta, Malta",
-      logo: "/images/logo2.png",
+      logo: "/images/malta.png",
       whatsapp: "https://wa.me/442038343226",
     },
 
@@ -3919,7 +3919,7 @@ export const countryData = {
       phone: "+44 20 3834 3226",
       email: "info@japanbuses.com",
       address: "2 Chome-10-4 Nihonbashi, Chuo City, Tokyo 103-0027, Japan",
-      logo: "/images/logo2.png",
+      logo: "../public/images/japan.png",
       whatsapp: "https://wa.me/442038343226",
     },
 

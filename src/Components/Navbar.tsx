@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { getCountryData } from '../data/data';
-import ContactModal from './QuoteModal';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { getCountryData } from "../data/basecode";
+import ContactModal from "./QuoteModal";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -10,12 +10,12 @@ const Navbar = () => {
   const data = getCountryData();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Transfers', href: '/transfers' },
-    { name: 'Shuttles', href: '/shuttles' },
-    { name: 'School trips', href: '/school-trips' },
-    { name: 'Corporate events', href: '/corporate-events' },
-    { name: 'About Us', href: '/about' }
+    { name: "Home", href: "/" },
+    { name: "Transfers", href: "/transfers" },
+    { name: "Shuttles", href: "/shuttles" },
+    { name: "School trips", href: "/school-trips" },
+    { name: "Corporate events", href: "/corporate-events" },
+    { name: "About Us", href: "/about" },
   ];
 
   const linkClasses = (href: string) => {
@@ -30,12 +30,18 @@ const Navbar = () => {
     <header className="bg-white shadow-sm fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="text-3xl">{data.logo.icon}</div>
-          <span className="text-2xl font-bold">
-            <span className="text-blue-600">Bus</span>
-            <span className="text-orange-500">{data.logo.text.replace('Bus', '')}</span>
-          </span>
+        <Link
+          to="/"
+          className="flex items-center space-x-2 justify-center sm:justify-start items-center"
+        >
+          <img
+            src={data.company.logo}
+            width={150}
+            height={49}
+            alt={`${data.company.name} Logo`}
+            className="h-auto"
+          />
+          <span className="text-2xl font-bold"></span>
         </Link>
 
         {/* Desktop Nav */}
@@ -62,7 +68,11 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {mobileOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
 

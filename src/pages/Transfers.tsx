@@ -7,8 +7,7 @@ import FinalCta from "../Components/CTA";
 
 const Transfers = () => {
 
-    const countryCode = "pl";
-    const countryData = getCountryData(countryCode);
+     const countryData = getCountryData();
     const transfersData = countryData.servicePages.transfers;
 
     return (

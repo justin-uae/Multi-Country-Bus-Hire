@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { toast } from "sonner";
 import { Input } from "../common/input";
 import { Label } from "../common/label";
 import { Button } from "../common/button";
 import { Textarea } from "../common/textarea";
+import { getCountryData } from "../data/basecode";
 
 interface ContactFormProps {
   onSuccess?: () => void;
@@ -12,6 +12,8 @@ interface ContactFormProps {
 export default function ContactForm({ onSuccess }: ContactFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [reasonForTravel, setReasonForTravel] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const data = getCountryData();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,20 +30,42 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       });
 
       if (response.ok) {
-        toast.success("Thank you! We will get back to you soon.");
+        setShowSuccess(true);
         form.reset();
         setReasonForTravel("");
-        onSuccess?.();
+        
+        // Wait 3 seconds then close modal
+        setTimeout(() => {
+          onSuccess?.();
+        }, 3000);
       } else {
-        toast.error("Something went wrong. Please try again.");
+        alert("Something went wrong. Please try again.");
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);
     }
   };
+
+  // Show success message
+  if (showSuccess) {
+    return (
+      <div className="text-center py-8">
+        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Thank You!</h3>
+        <p className="text-gray-600">
+          We've received your request and will get back to you within 24 hours.
+        </p>
+        <p className="text-sm text-gray-500 mt-4">Closing automatically...</p>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -50,15 +74,19 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       method="POST"
       className="space-y-4"
     >
+      {/* ... rest of your form remains exactly the same ... */}
       <input
         type="hidden"
         name="_subject"
-        value="New Travel Request from Website"
+        value={`New Travel Request from ${data?.hero?.countryName} Website`}
       />
 
       {/* Reason for Travel */}
       <div className="space-y-2">
-        <Label htmlFor="reason_for_travel" className="text-gray-800 font-medium text-sm">
+        <Label
+          htmlFor="reason_for_travel"
+          className="text-gray-800 font-medium text-sm"
+        >
           Reason For Travel <span className="text-red-500">*</span>
         </Label>
         <select
@@ -79,25 +107,31 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
       {/* First & Last Name */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="space-y-2">
-          <Label htmlFor="firstname" className="text-gray-800 font-medium text-sm">
+          <Label
+            htmlFor="firstname"
+            className="text-gray-800 font-medium text-sm"
+          >
             First Name <span className="text-red-500">*</span>
           </Label>
-          <Input 
-            id="firstname" 
-            name="firstname" 
-            required 
+          <Input
+            id="firstname"
+            name="firstname"
+            required
             className="h-10 bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 px-3 text-sm"
             placeholder="First name"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="lastname" className="text-gray-800 font-medium text-sm">
+          <Label
+            htmlFor="lastname"
+            className="text-gray-800 font-medium text-sm"
+          >
             Last Name <span className="text-red-500">*</span>
           </Label>
-          <Input 
-            id="lastname" 
-            name="lastname" 
-            required 
+          <Input
+            id="lastname"
+            name="lastname"
+            required
             className="h-10 bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 px-3 text-sm"
             placeholder="Last name"
           />
@@ -109,25 +143,25 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         <Label htmlFor="email" className="text-gray-800 font-medium text-sm">
           Email <span className="text-red-500">*</span>
         </Label>
-        <Input 
-          id="email" 
-          type="email" 
-          name="email" 
-          required 
+        <Input
+          id="email"
+          type="email"
+          name="email"
+          required
           className="h-10 bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 px-3 text-sm"
           placeholder="email@example.com"
         />
       </div>
-      
+
       <div className="space-y-2">
         <Label htmlFor="phone" className="text-gray-800 font-medium text-sm">
           Phone <span className="text-red-500">*</span>
         </Label>
-        <Input 
-          id="phone" 
-          type="tel" 
-          name="phone" 
-          required 
+        <Input
+          id="phone"
+          type="tel"
+          name="phone"
+          required
           className="h-10 bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 px-3 text-sm"
           placeholder="Phone number"
         />
@@ -138,10 +172,10 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         <Label htmlFor="company" className="text-gray-800 font-medium text-sm">
           Company/School <span className="text-red-500">*</span>
         </Label>
-        <Input 
-          id="company" 
-          name="company" 
-          required 
+        <Input
+          id="company"
+          name="company"
+          required
           className="h-10 bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 px-3 text-sm"
           placeholder="Company or school"
         />
@@ -152,18 +186,18 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         <Label htmlFor="message" className="text-gray-800 font-medium text-sm">
           Request Details
         </Label>
-        <Textarea 
-          id="message" 
-          name="message" 
-          rows={3} 
+        <Textarea
+          id="message"
+          name="message"
+          rows={3}
           className="bg-white border border-gray-300 rounded-lg hover:border-blue-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 resize-none p-3 text-sm min-h-[80px]"
           placeholder="Tell us about your travel needs..."
         />
       </div>
 
       {/* Submit Button */}
-      <Button 
-        type="submit" 
+      <Button
+        type="submit"
         disabled={submitting}
         className="w-full h-10 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow transition-all duration-200 disabled:opacity-50"
       >

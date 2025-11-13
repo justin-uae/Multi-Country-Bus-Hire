@@ -5,8 +5,7 @@ import TestimonialSection from '../Components/TestimonialSection';
 import AboutUsBanner from '../Components/AboutUsBanner';
 
 const AboutUs = () => {
-    const countryCode = "pl";
-    const countryData = getCountryData(countryCode);
+    const countryData = getCountryData();
 
     return (
         <div>

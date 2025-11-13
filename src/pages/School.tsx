@@ -6,8 +6,7 @@ import FinalCta from "../Components/CTA";
 import { getCountryData } from "../data/basecode";
 
 export default function SchoolTrips() {
-  const countryCode = "pl";
-  const countryData = getCountryData(countryCode);
+  const countryData = getCountryData();
   const schoolTripsData = countryData.servicePages.school;
 
   return (
