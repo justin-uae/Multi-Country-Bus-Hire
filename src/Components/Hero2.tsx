@@ -33,6 +33,7 @@ export default function ServicesHero({ title, span, subTitle, image }: Service) 
           <img
             src={image}
             alt={`${title} ${span} | France Buses`}
+            loading="lazy"
             className="object-cover rounded-2xl w-full h-auto max-h-[500px]"
           />
         </div>

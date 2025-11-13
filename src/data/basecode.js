@@ -237,7 +237,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why France Buses",
       description:
-        "Choose France Buses for reliable, comfortable, and affordable group transport. We make every journey across France effortless with professional drivers and modern vehicles.",
+        "Choose France Buses for reliable, comfortable, and affordable group transport.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -902,35 +902,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Romania",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Romania. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Romania",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Romania. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Romania",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Romania. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Romania",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Romania. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Romania",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Romania. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -1092,7 +1092,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Romania Buses",
       description:
-        "Choose Romania Buses for reliable, comfortable, and affordable group transport throughout Romania. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Romania Buses for reliable, comfortable, and affordable group transport throughout Romania.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -1326,11 +1326,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Hungary",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Hungary with Hungary Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Hungary.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Hungary",
       cities: ["Budapest", "Debrecen", "Szeged", "Pécs"],
     },
 
@@ -1338,35 +1339,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Hungary",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Hungary. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Hungary",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Hungary. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Hungary",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Hungary. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Hungary",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Hungary. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Hungary",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Hungary. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -1528,7 +1529,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Hungary Buses",
       description:
-        "Choose Hungary Buses for reliable, comfortable, and affordable group transport throughout Hungary. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Hungary Buses for reliable, comfortable, and affordable group transport throughout Hungary.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -1764,11 +1765,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Portugal",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Portugal with Portugal Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Portugal.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Portugal",
       cities: ["Lisbon", "Porto", "Faro", "Coimbra"],
     },
 
@@ -1776,35 +1778,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Portugal",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Portugal. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Portugal",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Portugal. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Portugal",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Portugal. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Portugal",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Portugal. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Portugal",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Portugal. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -1966,7 +1968,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Portugal Buses",
       description:
-        "Choose Portugal Buses for reliable, comfortable, and affordable group transport throughout Portugal. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Portugal Buses for reliable, comfortable, and affordable group transport throughout Portugal.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -2203,11 +2205,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Brazil",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Brazil with Brazil Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Brazil.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Brazil",
       cities: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
     },
 
@@ -2215,35 +2218,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Brazil",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Brazil. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Brazil",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Brazil. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Brazil",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Brazil. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Brazil",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Brazil. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Brazil",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Brazil. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -2405,7 +2408,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Brazil Buses",
       description:
-        "Choose Brazil Buses for reliable, comfortable, and affordable group transport throughout Brazil. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Brazil Buses for reliable, comfortable, and affordable group transport throughout Brazil.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -2641,11 +2644,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Morocco",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Morocco with Morocco Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Morocco.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Morocco",
       cities: ["Casablanca", "Marrakech", "Rabat", "Fes"],
     },
 
@@ -2653,35 +2657,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Morocco",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Morocco. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Morocco",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Morocco. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Morocco",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Morocco. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Morocco",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Morocco. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Morocco",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Morocco. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -2843,7 +2847,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Morocco Buses",
       description:
-        "Choose Morocco Buses for reliable, comfortable, and affordable group transport throughout Morocco. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Morocco Buses for reliable, comfortable, and affordable group transport throughout Morocco.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -3080,11 +3084,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Saudi Arabia",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Saudi Arabia with Saudi Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout the Kingdom.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Saudi Arabia",
       cities: ["Riyadh", "Jeddah", "Dammam", "Mecca"],
     },
 
@@ -3092,35 +3097,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Saudi Arabia",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Saudi Arabia. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Saudi Arabia",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Saudi Arabia. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Saudi Arabia",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Saudi Arabia. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Saudi Arabia",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Saudi Arabia. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Saudi Arabia",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Saudi Arabia. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -3282,7 +3287,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Saudi Buses",
       description:
-        "Choose Saudi Buses for reliable, comfortable, and affordable group transport throughout Saudi Arabia. We make every journey across the Kingdom effortless with professional drivers and modern vehicles.",
+        "Choose Saudi Buses for reliable, comfortable, and affordable group transport throughout Saudi Arabia.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -3512,11 +3517,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Malta",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Malta with Malta Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Malta and Gozo.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Malta",
       cities: ["Valletta", "Sliema", "St. Julian's", "Mdina"],
     },
 
@@ -3524,35 +3530,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Malta",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Malta. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Malta",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Malta. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Malta",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Malta. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Malta",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Malta. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Malta",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Malta. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -3714,7 +3720,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Malta Buses",
       description:
-        "Choose Malta Buses for reliable, comfortable, and affordable group transport throughout Malta. We make every journey across the islands effortless with professional drivers and modern vehicles.",
+        "Choose Malta Buses for reliable, comfortable, and affordable group transport throughout Malta.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -3944,11 +3950,12 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Japan",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Japan with Japan Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Japan.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Japan",
       cities: ["Tokyo", "Osaka", "Kyoto", "Yokohama"],
     },
 
@@ -3956,35 +3963,35 @@ export const countryData = {
     services: [
       {
         key: "corporate",
-        title: "Corporate Events Japan",
+        title: "Corporate Events",
         description:
           "Streamline your corporate travel with our premium coach hire services across Japan. Ideal for business meetings, conferences, and company events, we provide dependable and comfortable transport for your entire team.",
         image: "/images/corporate21.png",
       },
       {
         key: "school",
-        title: "School Trips Japan",
+        title: "School Trips",
         description:
           "Transform educational journeys into safe and memorable experiences with our trusted school coach hire service in Japan. Our child-friendly drivers and modern vehicles ensure comfort and safety throughout your trip.",
         image: "/images/school21.png",
       },
       {
         key: "shuttles",
-        title: "Shuttle Services Japan",
+        title: "Shuttle Services",
         description:
           "Enjoy smooth and efficient travel between airports, hotels, and event venues with our reliable shuttle services throughout Japan. Designed for maximum convenience and comfort.",
         image: "/images/shuttle21.png",
       },
       {
         key: "transfers",
-        title: "Transport Transfers Japan",
+        title: "Transport Transfers",
         description:
           "Experience seamless door-to-door transport with our professional transfer service anywhere in Japan. From airport pickups to city transfers, we deliver smooth, comfortable, and punctual travel experiences.",
         image: "/images/transfer21.png",
       },
       {
         key: "home",
-        title: "Home to School Transport Japan",
+        title: "Home to School Transport",
         description:
           "Simplify your family's daily routine with our safe and reliable home to school transport service in Japan. Our professional drivers ensure punctuality and give parents complete peace of mind.",
         image: "/images/home21.png",
@@ -4146,7 +4153,7 @@ export const countryData = {
       badge: "Why Choose Us",
       title: "Why Japan Buses",
       description:
-        "Choose Japan Buses for reliable, comfortable, and affordable group transport throughout Japan. We make every journey across the country effortless with professional drivers and modern vehicles.",
+        "Choose Japan Buses for reliable, comfortable, and affordable group transport throughout Japan.",
       image: "/images/bus2.png",
       vectorImage: "/images/Vector.png",
       features: [
@@ -4207,10 +4214,10 @@ export const countryData = {
       badge: "We've partnered with",
       items: [
         { name: "University of Tokyo", logo: "/images/partner/psg.png" },
-        { name: "Apple Japan", logo: "/images/partner/apple-logo-banner.avif" },
+        { name: "Apple Japan", logo: "/images/partner/rn.png" },
         {
           name: "Sony Corporation",
-          logo: "/images/partner/nintendo-logo-banner.avif",
+          logo: "/images/partner/dlp.png",
         },
         { name: "Japanese Olympic Committee", logo: "/images/partner/ttl.png" },
         { name: "Aeon Mall", logo: "/images/partner/if.png" },

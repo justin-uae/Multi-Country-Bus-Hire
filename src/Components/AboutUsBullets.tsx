@@ -19,6 +19,7 @@ const AboutUsBullets = ({ badge, description, image, features }: AboutUsProps) =
                     <div className="relative flex justify-center">
                         <img
                             src={image}
+                            loading="lazy"
                             alt={badge}
                             className="w-full max-w-lg object-cover rounded-2xl shadow-lg"
                         />

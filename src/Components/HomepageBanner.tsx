@@ -5,7 +5,7 @@ const HomepageBanner = () => {
     const data = getCountryData();
     return (
         <section className="relative bg-white overflow-hidden">
-            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-5">
+            <div className="relative max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-5">
 
                 {/* Left side: text + badges */}
                 <div className="space-y-6">

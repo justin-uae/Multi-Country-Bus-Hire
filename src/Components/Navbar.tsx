@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   const linkClasses = (href: string) => {
-    const base = "px-3 py-2 rounded-md text-base font-medium";
+    const base = "px-3 py-2 rounded-md font-medium transition-colors duration-200";
     const isActive = location.pathname === href;
     return isActive
       ? `${base} text-blue-600 underline`
@@ -44,23 +44,23 @@ const Navbar = () => {
           <span className="text-2xl font-bold"></span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-4">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className={linkClasses(item.href)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+          {/* Desktop Nav - Hidden on mobile and tablet, visible on large screens */}
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`${linkClasses(item.href)} text-sm xl:text-base whitespace-nowrap`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Actions */}
-        <div className="hidden md:flex items-center">
-          <ContactModal />
-        </div>
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
+            <ContactModal />
+          </div>
 
         {/* Mobile menu button */}
         <button
@@ -76,24 +76,21 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile/Tablet Nav */}
       {mobileOpen && (
-        <nav className="md:hidden bg-white shadow-lg">
-          <div className="px-2 pt-2 pb-4 flex flex-col gap-2">
+        <nav className="lg:hidden bg-white shadow-lg border-t border-gray-200">
+          <div className="px-4 sm:px-6 pt-2 pb-4 space-y-1">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={
-                  linkClasses(item.href).replace("text-base", "text-sm") +
-                  " block w-full"
-                }
+                className={`${linkClasses(item.href)} block text-base`}
                 onClick={() => setMobileOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="mt-2">
+            <div className="pt-4 border-t border-gray-200 mt-4">
               <ContactModal />
             </div>
           </div>
