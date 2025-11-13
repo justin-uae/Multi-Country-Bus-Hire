@@ -8,8 +8,7 @@ import ServicesSection from '../Components/OurServices'
 
 const HomePage = () => {
 
-    const countryCode = 'pl';
-    const countryData = getCountryData(countryCode);
+    const countryData = getCountryData();
 
     return (
         <div>

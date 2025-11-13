@@ -2,8 +2,7 @@ import { getCountryData } from '../data/basecode';
 import ContactModal from './QuoteModal';
 
 const HomepageBanner = () => {
-    const countryCode = 'pl';
-    const data = getCountryData(countryCode);
+    const data = getCountryData();
     return (
         <section className="relative bg-white overflow-hidden">
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-5">
