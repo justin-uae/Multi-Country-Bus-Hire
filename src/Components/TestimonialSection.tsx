@@ -36,7 +36,7 @@ export default function TestimonialSection() {
   const filtered: Testimonial[] = testimonialsData.items.filter((t: Testimonial) => t.key === active);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="w-full">
       <div className="max-w-7xl mx-auto px-4 text-center">
         {/* Header */}
         <div className="flex flex-col items-center mb-8">
@@ -103,4 +103,4 @@ export default function TestimonialSection() {
       </div>
     </section>
   );
-}
+}   
