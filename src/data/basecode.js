@@ -513,30 +513,30 @@ export const countryData = {
       },
     ],
 
-        // About Us section
-        aboutUs: {
-            badge: "About Us",
-            description: "At Poland Buses, we are proud to be one of Poland's leading providers of reliable, comfortable, and affordable group transportation. From Warsaw to Krakow, Wroclaw to Gdansk, we make travel simple with our modern fleet, professional drivers, and commitment to exceptional service throughout Poland.",
-            image: "/images/abtus.png",
-            features: [
-                {
-                    title: "Modern Polish Fleet",
-                    description: "Our fleet ranges from compact 16-seater minibuses to large 50-seat luxury coaches — all maintained to the highest standards and equipped with air-conditioning, reclining seats, Wi-Fi, and on-board entertainment options."
-                },
-                {
-                    title: "Experienced Polish Drivers",
-                    description: "Every Poland Buses driver is fully licensed, background-checked, and trained to provide safe, punctual, and friendly service — whether for short city transfers or long-distance journeys across Poland."
-                },
-                {
-                    title: "Tailored Travel Solutions Poland",
-                    description: "We handle corporate events, school trips, wedding transport, airport transfers, and private tours across Poland. Whatever your group size or schedule, we'll plan a journey that fits your needs perfectly."
-                },
-                {
-                    title: "Transparent Pricing Poland",
-                    description: "Our quotes are all-inclusive with no hidden fees, giving you peace of mind and total clarity on costs before you travel anywhere in Poland."
-                }
-            ]
+    // About Us section
+    aboutUs: {
+      badge: "About Us",
+      description: "At Poland Buses, we are proud to be one of Poland's leading providers of reliable, comfortable, and affordable group transportation. From Warsaw to Krakow, Wroclaw to Gdansk, we make travel simple with our modern fleet, professional drivers, and commitment to exceptional service throughout Poland.",
+      image: "/images/abtus.png",
+      features: [
+        {
+          title: "Modern Polish Fleet",
+          description: "Our fleet ranges from compact 16-seater minibuses to large 50-seat luxury coaches — all maintained to the highest standards and equipped with air-conditioning, reclining seats, Wi-Fi, and on-board entertainment options."
         },
+        {
+          title: "Experienced Polish Drivers",
+          description: "Every Poland Buses driver is fully licensed, background-checked, and trained to provide safe, punctual, and friendly service — whether for short city transfers or long-distance journeys across Poland."
+        },
+        {
+          title: "Tailored Travel Solutions Poland",
+          description: "We handle corporate events, school trips, wedding transport, airport transfers, and private tours across Poland. Whatever your group size or schedule, we'll plan a journey that fits your needs perfectly."
+        },
+        {
+          title: "Transparent Pricing Poland",
+          description: "Our quotes are all-inclusive with no hidden fees, giving you peace of mind and total clarity on costs before you travel anywhere in Poland."
+        }
+      ]
+    },
 
     // Testimonials
     testimonials: {
@@ -4349,17 +4349,22 @@ export const countryData = {
   // Add more countries as needed...
 };
 
+export const getCountryCodeFromEnv = () => {
+  return import.meta.env.VITE_COUNTRY_CODE || "fr";
+};
+
 // Helper function to get service page data
-export const getServicePageData = (countryCode = "fr", serviceType) => {
-  const country = getCountryData(countryCode);
+export const getServicePageData = (countryCode, serviceType) => {
+  const code = countryCode || getCountryCodeFromEnv();
+  const country = getCountryData(code);
   return country.servicePages[serviceType] || null;
 };
 
 // Helper function to get country data
-export const getCountryData = (countryCode = "fr") => {
-  return countryData[countryCode] || countryData.fr;
+export const getCountryData = (countryCode) => {
+  const code = countryCode || getCountryCodeFromEnv();
+  return countryData[code] || countryData.fr;
 };
-
 // Helper function to get all available countries
 export const getAvailableCountries = () => {
   return Object.keys(countryData);

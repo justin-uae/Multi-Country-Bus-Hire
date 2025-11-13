@@ -1,10 +1,7 @@
-import React from 'react';
-// import { getCountryData } from '../data/data';
 import { getCountryData } from '../data/basecode';
 
 const OurPartners = () => {
-  const countryCode = 'pl';
-  const countryData = getCountryData(countryCode);
+  const countryData = getCountryData();
 
   // Duplicate partners array for seamless infinite scroll
   const duplicatedPartners = [...countryData.partners.items, ...countryData.partners.items];

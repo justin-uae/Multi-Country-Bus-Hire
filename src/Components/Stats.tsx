@@ -1,5 +1,4 @@
-import React from 'react';
-import { getCountryData } from '../data/data';
+import { getCountryData } from '../data/basecode';
 
 const Stats = () => {
     const data = getCountryData();
@@ -16,19 +15,19 @@ const Stats = () => {
                 {/* Section Header */}
                 <div className="mb-12">
                     <div className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-3">
-                        {data.stats.sectionTitle}
+                        {data.achievements?.stats.badge}
                     </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                        {data.stats.heading}
+                        {data.achievements.stats.title}
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl">
-                        {data.stats.description}
+                        {data.achievements.stats.description}
                     </p>
                 </div>
 
                 {/* Stats Grid */}
                 <div className="grid md:grid-cols-3 gap-6">
-                    {data.stats.metrics.map((metric, index) => {
+                    {data.achievements.stats.map((metric: any, index: any) => {
                         const isMainStat = index === 0;
                         const gradientClass = colorClasses.purple;
 
