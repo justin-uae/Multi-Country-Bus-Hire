@@ -1331,6 +1331,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Hungary with Hungary Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Hungary.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Hungary",
       cities: ["Budapest", "Debrecen", "Szeged", "Pécs"],
     },
 
@@ -1769,6 +1770,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Portugal with Portugal Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Portugal.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Portugal",
       cities: ["Lisbon", "Porto", "Faro", "Coimbra"],
     },
 
@@ -2208,6 +2210,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Brazil with Brazil Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Brazil.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Brazil",
       cities: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"],
     },
 
@@ -2646,6 +2649,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Morocco with Morocco Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Morocco.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Morocco",
       cities: ["Casablanca", "Marrakech", "Rabat", "Fes"],
     },
 
@@ -3085,6 +3089,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Saudi Arabia with Saudi Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout the Kingdom.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Saudi Arabia",
       cities: ["Riyadh", "Jeddah", "Dammam", "Mecca"],
     },
 
@@ -3517,6 +3522,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Malta with Malta Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Malta and Gozo.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Malta",
       cities: ["Valletta", "Sliema", "St. Julian's", "Mdina"],
     },
 
@@ -3949,6 +3955,7 @@ export const countryData = {
         "Reliable and affordable coach and minibus hire in Japan with Japan Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Japan.",
       image: "/images/bus-hire-transparent.png",
       frameImage: "/images/Frame.png",
+      countryName: "Japan",
       cities: ["Tokyo", "Osaka", "Kyoto", "Yokohama"],
     },
 
@@ -4207,10 +4214,10 @@ export const countryData = {
       badge: "We've partnered with",
       items: [
         { name: "University of Tokyo", logo: "/images/partner/psg.png" },
-        { name: "Apple Japan", logo: "/images/partner/apple-logo-banner.avif" },
+        { name: "Apple Japan", logo: "/images/partner/rn.png" },
         {
           name: "Sony Corporation",
-          logo: "/images/partner/nintendo-logo-banner.avif",
+          logo: "/images/partner/dlp.png",
         },
         { name: "Japanese Olympic Committee", logo: "/images/partner/ttl.png" },
         { name: "Aeon Mall", logo: "/images/partner/if.png" },

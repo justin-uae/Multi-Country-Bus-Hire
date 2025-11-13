@@ -2,8 +2,7 @@ import { getCountryData } from '../data/basecode';
 import ContactModal from './QuoteModal';
 
 const CTA = () => {
-    const countryCode = 'pl';
-    const countryData = getCountryData(countryCode);
+    const countryData = getCountryData();
 
     return (
         <section className="py-16 md:py-24">
