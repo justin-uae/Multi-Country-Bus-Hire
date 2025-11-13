@@ -1326,7 +1326,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Hungary",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Hungary with Hungary Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Hungary.",
       image: "/images/bus-hire-transparent.png",
@@ -1765,7 +1765,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Portugal",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Portugal with Portugal Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Portugal.",
       image: "/images/bus-hire-transparent.png",
@@ -2205,7 +2205,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Brazil",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Brazil with Brazil Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Brazil.",
       image: "/images/bus-hire-transparent.png",
@@ -2644,7 +2644,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Morocco",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Morocco with Morocco Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Morocco.",
       image: "/images/bus-hire-transparent.png",
@@ -3084,7 +3084,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Saudi Arabia",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Saudi Arabia with Saudi Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout the Kingdom.",
       image: "/images/bus-hire-transparent.png",
@@ -3517,7 +3517,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Malta",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Malta with Malta Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Malta and Gozo.",
       image: "/images/bus-hire-transparent.png",
@@ -3950,7 +3950,7 @@ export const countryData = {
 
     // Hero section
     hero: {
-      title: "Professional coach and minibus hire services across Japan",
+      title: "Professional coach and minibus hire services across",
       description:
         "Reliable and affordable coach and minibus hire in Japan with Japan Buses — perfect for corporate events, school trips, airport transfers, private tours, and group travel throughout Japan.",
       image: "/images/bus-hire-transparent.png",
